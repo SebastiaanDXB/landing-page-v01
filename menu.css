@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass');
+
+:root {
+    --dark-color-main: #333;
+    --mid-color-main: #999;
+    --lighter-color-main: rgba(51, 51, 51, 0.4);
+    --accent-color-main: #00a3d5;
+    --light-accent-color-main: #C5EAF6;
+    --light-color-main: #fff;
+}
+
+/* nav */
+.whitebar {
+  height: 103px;
+  width: 100%;
+  background-color: var(--light-color-main);
+  position: fixed;
+  z-index: 1000;
+}
+.logo {
+  float: left;
+  width: 250px;
+  max-width: 80%;
+  padding: 1rem;
+}
+.text-logo {
+  color: var(--dark-color-main);
+  font-size: 1.5rem;
+  font-family: 'Overpass', sans-serif !important;
+  font-weight: 800;
+  padding: 0.3rem 0.3rem 0.3rem 3rem;
+  display: block;
+}
+.menu-item {
+  font-family: 'Overpass', sans-serif;
+  font-size: 1.2rem; /* 12px */
+  font-weight: 200;
+  line-height: 1.4;
+  text-decoration: none;
+}
+.navbar {
+  background-color: transparent;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  z-index: 1001;
+  position: fixed;
+  padding: 0.6rem;
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+} 
+.navbar-link {
+  text-align: center;  
+}
+
+li.menu-item{
+  list-style-type: none;
+  cursor: pointer;
+}
+.navbar-link a {
+  padding: 1.2rem 1.2rem;
+  color: var(--dark-color-main);
+  text-decoration: none;
+  font-weight: 200;
+  transition: color 600ms ease;
+} 
+.navbar-link a:hover {
+  opacity: 0.5;
+}
+.navbar-menu {
+  display: flex;
+}
+.navbar-menu-right {
+  margin-left: auto;
+} 
+.navbar-link-toggle {
+  display: none;
+  height: 0px;
+}
+
+@media only screen and (max-width: 870px) {
+  .navbar-menu,
+  .navbar {
+    flex-direction: column;
+    background-color: var(--light-color-main) !important;
+  }    
+  .navbar {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15)
+  }
+  nav .navbar-link {
+    margin: 10px 0;
+  }
+  .navbar-menu {
+    display:none;
+    background-color: #fff !important;
+  }    
+  .navbar-menu-right {
+    margin-left:0;
+  }    
+  .nav-button {
+    margin: 10px;
+  }
+  .navbar-toggle-show {
+    display: flex;
+  }    
+  .navbar-link-toggle {
+    align-self: flex-end;
+    display: initial;
+    position: absolute;
+    cursor: pointer;
+    padding: 18px;
+  } 
+  .text-logo {
+    padding: 0.6rem 0;
+  }
+  .fa-upsize {
+      font-size: 2rem;
+  }
+  .flex-container {
+      flex-direction: column;
+  }
+
+}
